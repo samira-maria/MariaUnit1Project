@@ -24,8 +24,8 @@ public class TipCalculator {
             if (itemCost != END) {
                 cost += itemCost;
                 System.out.print("Enter the item: ");
-                String item = scan.next();
                 scan.nextLine();
+                String item = scan.nextLine();
                 items.add(item);
             }
         }
@@ -55,4 +55,3 @@ public class TipCalculator {
 
     }
 }
-
