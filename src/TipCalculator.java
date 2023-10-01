@@ -51,7 +51,14 @@ public class TipCalculator {
             System.out.println(item);
         }
 
+        System.out.print("How much money did you give?: $");
+        double moneyGiven = scan.nextDouble();
+        moneyGiven = Math.round(moneyGiven/ 100.00) * 100.00;
 
+        double change = Math.round((totalBillWithTip - moneyGiven)/100.00)*100.00 ;
+        System.out.println("Change: $" + change);
 
+        double changePerPerson= Math.round((change/peopleInGroup)/100.00)*100.00;
+        System.out.println("If you want to split the change each person will receive: $" + changePerPerson);
     }
 }
